@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="~/Scripts/jquery-1.11.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/Main.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Josh Harbaugh Portfolio</title>
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet">
+
+    
+</head>
+<body id="page-top" class="index">
+    
+        <div class="container">
+            <nav class="navbar">
+                <div class="row">
+            <img class="navbar-left" src="http://cdn-img.easylogo.cn/gif/51/51700.gif" />
+                <div class="navbar-right" style="line-height: 170px;">
+                    <ul class="list-inline">
+                    <li data-url="@Url.Action("Index", "Home")" class="ajax-link"> Home</li>
+                    <li data-url="@Url.Action("Index", "About")" class="ajax-link">About</li>
+                    <li data-url="@Url.Action("Work", "Home")" class="ajax-link">Work</li>
+                    <li data-url="@Url.Action("Careers", "Home")" class="ajax-link">Careers</li>
+                    <li data-url="@Url.Action("Index", "Contact")" class="ajax-link">Contact</li>
+                    </ul>
+                </div>
+            </div>
+            </nav>
+            </div>
+
+    <div id="content">
+    @RenderBody()
+    </div>
+</body>
+</html>
+

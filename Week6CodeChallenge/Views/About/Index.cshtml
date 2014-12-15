@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    if (!Request.IsAjaxRequest())
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
+
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="tabbable" id="tabs-299305">
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a data-url="@Url.Action("Who", "About")" class="ajax-tab">Who</a>
+                    </li>
+                    <li>
+                        <a data-url="@Url.Action("What", "About")" class="ajax-tab">What</a>
+                    </li>
+                    <li>
+                        <a data-url="@Url.Action("Why", "About")" class="ajax-tab">Why</a>
+                    </li>
+                    <li>
+                        <a data-url="@Url.Action("How", "About")" class="ajax-tab">How</a>
+                    </li>
+                    <li>
+                        <a data-url="@Url.Action("Where", "About")" class="ajax-tab">Where</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                @Html.Partial("Who")
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
